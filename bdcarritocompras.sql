@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-01-2023 a las 16:56:30
+-- Tiempo de generación: 01-03-2023 a las 02:31:26
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -108,7 +108,7 @@ INSERT INTO `menu` (`idmenu`, `menombre`, `medescripcion`, `idpadre`, `medeshabi
 (12, 'Administrar Usuarios', '../Admin/tablaUsuarios.php', 1, NULL),
 (13, 'Tus Compras', '#', NULL, NULL),
 (14, 'Ver Carrito', '../Cliente/carrito.php', 13, NULL),
-(15, 'Listado de Compras', '../Cliente/listaCompras.php', 13, NULL),
+(15, 'Listado de Compras', '../Cliente/listaCompras.php', 13, '2023-02-26 21:05:33'),
 (16, 'Deposito Permisos', '#', NULL, '0000-00-00 00:00:00'),
 (17, 'Ver Compras', '../Deposito/tablaCompras.php', 16, NULL),
 (18, 'Ver Productos', '../Deposito/tablaProductos.php', 16, NULL),
@@ -157,11 +157,12 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`idproducto`, `pronombre`, `prodetalle`, `procantstock`, `precio`, `prodeshabilitado`, `imagen`) VALUES
-(99, 'Planta 1', 'descripcion sobre planta 1', 10, 100, '0000-00-00 00:00:00', 'producto1674668198103801747363d168a6b8d69.jpeg'),
-(100, 'Planta 2', 'descripcion sobre planta 2', 10, 100, '0000-00-00 00:00:00', 'producto167466821298072312663d168b431436.jpeg'),
-(101, 'Planta 3', 'descripcion sobre planta 3', 10, 100, '0000-00-00 00:00:00', 'producto167466822524751216463d168c1d9ef6.jpeg'),
-(102, 'Planta 4', 'descripcion sobre planta 4', 10, 100, '0000-00-00 00:00:00', 'producto1674668236131023293663d168cc86c42.jpeg'),
-(103, 'Planta 5', 'descripcion sobre planta 5', 10, 100, '0000-00-00 00:00:00', 'producto1674668261197346209963d168e50d7dd.jpeg');
+(110, 'Dakimakura Centurión', 'Suave almohada de 1,80cm para descansar a gusto, disfrutando de la compañía del Sr. Centurión', 98, 100000, '0000-00-00 00:00:00', 'producto167762994311504977263fe99f72cfbf.png'),
+(111, 'Camiseta BC', 'Camiseta manga corta de excelente calidad', 97, 30000, '0000-00-00 00:00:00', 'producto167762999735828027363fe9a2d5e464.png'),
+(112, 'Cartuchera BC', 'Donde guardar tus útiles de clases', 100, 15000, '0000-00-00 00:00:00', 'producto1677630025157301940963fe9a494c73c.png'),
+(113, 'Funda BC', 'Funda para Iphone', 100, 55000, '0000-00-00 00:00:00', 'producto167763005451288607063fe9a66732d8.png'),
+(114, 'Gorra BC', 'Para protegerte del sol', 97, 30000, '0000-00-00 00:00:00', 'producto167763007441067185163fe9a7a48783.png'),
+(115, 'Taza BC', 'Empieza los días bebiendo una buena taza de café', 99, 20000, '0000-00-00 00:00:00', 'producto167763010317612313263fe9a97dae68.png');
 
 -- --------------------------------------------------------
 
@@ -202,7 +203,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`idusuario`, `usnombre`, `uspass`, `usmail`, `usdeshabilitado`) VALUES
-(1, 'mondongo', '9fe75de7500e7073d749469bb3a46cc2', 'braiankrayan@hotmail.com', NULL),
+(1, 'mondongo', '9fe75de7500e7073d749469bb3a46cc2', 'mondongo@gmail.com', NULL),
 (2, 'admin', '0192023a7bbd73250516f069df18b500', 'admin@gmail.com', NULL),
 (3, 'deposito', 'caaf856169610904e4f188e6ee23e88c', 'deposito@gmail.com', NULL),
 (4, 'cliente', '7159bbe0c8ca2a67230a26b72dea7557', 'cliente@gmail.com', NULL);
@@ -318,31 +319,31 @@ ALTER TABLE `usuariorol`
 -- AUTO_INCREMENT de la tabla `compra`
 --
 ALTER TABLE `compra`
-  MODIFY `idcompra` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `idcompra` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `compraestado`
 --
 ALTER TABLE `compraestado`
-  MODIFY `idcompraestado` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+  MODIFY `idcompraestado` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=146;
 
 --
 -- AUTO_INCREMENT de la tabla `compraitem`
 --
 ALTER TABLE `compraitem`
-  MODIFY `idcompraitem` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `idcompraitem` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT de la tabla `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `idmenu` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `idmenu` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `idproducto` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
+  MODIFY `idproducto` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
 
 --
 -- AUTO_INCREMENT de la tabla `rol`
@@ -354,7 +355,7 @@ ALTER TABLE `rol`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `idusuario` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Restricciones para tablas volcadas
