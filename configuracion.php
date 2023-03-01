@@ -11,7 +11,7 @@ include_once 'Utiles/funciones.php';
 include_once 'Utiles/funcionesMailer.php';
 
 // MODIFICAR SEGÚN TENGAS EL PROYECTO GUARDADO LOCALMENTE
-$PROYECTO = 'TP-Final-PWD';
+$PROYECTO = 'La-Casa-de-las-Plantas';
 
 // ALMACENA EL DIRECTORIO DEL PROYECTO
 $ROOT = $_SERVER['DOCUMENT_ROOT']."/$PROYECTO/";

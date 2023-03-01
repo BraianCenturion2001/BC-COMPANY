@@ -11,7 +11,7 @@
     <script type="text/javascript" src="..\..\Utiles\jquery-3.6.1\jquery.min.js"></script>
     
     <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="..\..\Utiles\bootstrap\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\..\Utiles\bootstrap\bootstrap.min.css">
     
     <!-- CSS MENÚ, SIN ESTO LOS DROPDOWNS NO FUNCIONAN -->
     <link rel="stylesheet" href="..\..\Utiles\menu.css">

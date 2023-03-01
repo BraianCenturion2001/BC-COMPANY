@@ -50,7 +50,7 @@ if (!$sesion->verificarPermiso('../Cliente/listaCompras.php')) {
         <div class="container py-5 text-center">
             <div class=" card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
-                    <div class="col-md-4"><img src="../img/plantaTriste.PNG" class="img-fluid rounded-start" alt="..."></div>
+                    <div class="col-md-4"><img src="../img/logo_black.svg" class="img-fluid rounded-start" alt="..."></div>
                     <div class="col-md-8">
                         <div class="card-body">
                             <h4 class="card-title">A&uacute;n no has realizado ninguna compra</h4>

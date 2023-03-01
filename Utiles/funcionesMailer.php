@@ -5,7 +5,8 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 //Funcion encargada del envio del mail, recibe como parametro un arreglo con el id de la compra y el id de compraestadotipo
-function enviarMail ($data) {
+function enviarMail($data)
+{
     $user = buscarUsuario($data['idcompra']);
     $bodyMail = devolverBody($data);
     $mail = new PHPMailer(true);
@@ -38,19 +39,21 @@ function enviarMail ($data) {
 }
 
 // Funcion que se encarga de buscar los datos del usuario necesarios con el idcompra
-function buscarUsuario($idcompra){
+function buscarUsuario($idcompra)
+{
     $objCompra = new abmCompra();
     $objC = $objCompra->buscar(['idcompra' => $idcompra]);
-   
+
     $objUsuario = $objC[0]->getObjUsuario();
-    return (['usmail'=>$objUsuario->getUsMail(), 'usname'=>$objUsuario->getUsNombre()]);
+    return (['usmail' => $objUsuario->getUsMail(), 'usname' => $objUsuario->getUsNombre()]);
 }
 
 //Funcion que se encarga de crear el cuerpo del mail en base al estado de la compra
-function devolverBody($data){
-    switch($data['idcompraestadotipo']){
+function devolverBody($data)
+{
+    switch ($data['idcompraestadotipo']) {
         case 1: {
-            $body = "<!DOCTYPE html>
+                $body = "<!DOCTYPE html>
             <html lang='en'>
                 <head>
                     <meta charset='UTF-8'>
@@ -88,7 +91,7 @@ function devolverBody($data){
                                         border-radius: 5px;
                                         margin: 0 auto;
                                         margin-top: 1.5rem;
-                                        background-color: rgba( 120,194,173);
+                                        background-color: #000000;
                                         padding: 1rem;  
                                         box-shadow: 5px 5px 15px 5px #000000;
                                         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -151,8 +154,8 @@ function devolverBody($data){
                                     /*CSS BUTTON*/
                                     
                                     .namebrand *{
-                                        color:#F5EFE6;
                                         padding: 5px;
+                                        text-color: white;
                                     }
                                 </style>
                     <title>Mail Confirm</title>
@@ -162,7 +165,7 @@ function devolverBody($data){
                     <div class='containerFull'>
                         <div class='nav'>
                             <div class='namebrand'>
-                                <h2><i class='fa-solid fa-seedling'></i>La casa de las plantas<i class='fa-solid fa-seedling'></i></h2>
+                                <h2>BC COMPANY</h2>
                             </div>
                             
                         </div>
@@ -185,10 +188,10 @@ function devolverBody($data){
                         </div>
                     </body>
                 </html>";
-        }
-        break;
+            }
+            break;
         case 2: {
-            $body = "<!DOCTYPE html>
+                $body = "<!DOCTYPE html>
             <html lang='en'>
                 <head>
                     <meta charset='UTF-8'>
@@ -226,7 +229,7 @@ function devolverBody($data){
                                         border-radius: 5px;
                                         margin: 0 auto;
                                         margin-top: 1.5rem;
-                                        background-color: #BFACE2;
+                                        background-color: #000000;
                                         padding: 1rem;  
                                         box-shadow: 5px 5px 15px 5px #000000;
                                         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -289,8 +292,8 @@ function devolverBody($data){
                                     /*CSS BUTTON*/
                                     
                                     .namebrand *{
-                                        color:#F5EFE6;
                                         padding: 5px;
+                                        text-color: white;
                                     }
                                 </style>
                     <title>Mail Confirm</title>
@@ -300,7 +303,7 @@ function devolverBody($data){
                     <div class='containerFull'>
                         <div class='nav'>
                             <div class='namebrand'>
-                                <h2><i class='fa-solid fa-seedling'></i>La casa de las plantas<i class='fa-solid fa-seedling'></i></h2>
+                                <h2>BC COMPANY</h2>
                             </div>
                             
                         </div>
@@ -319,10 +322,10 @@ function devolverBody($data){
                         </div>
                     </body>
                 </html>";
-        }
-        break;
-        case 3: { 
-            $body = "<!DOCTYPE html>
+            }
+            break;
+        case 3: {
+                $body = "<!DOCTYPE html>
             <html lang='en'>
                 <head>
                     <meta charset='UTF-8'>
@@ -361,7 +364,7 @@ function devolverBody($data){
                                         border-radius: 5px;
                                         margin: 0 auto;
                                         margin-top: 1.5rem;
-                                        background-color: #93C6E7;
+                                        background-color: #000000;
                                         padding: 1rem;  
                                         box-shadow: 5px 5px 15px 5px #000000;
                                         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -424,8 +427,8 @@ function devolverBody($data){
                                     /*CSS BUTTON*/
                                     
                                     .namebrand *{
-                                        color:#F5EFE6;
                                         padding: 5px;
+                                        text-color: white;
                                     }
                                 </style>
                     <title>Mail Confirm</title>
@@ -435,7 +438,7 @@ function devolverBody($data){
                     <div class='containerFull'>
                         <div class='nav'>
                             <div class='namebrand'>
-                                <h2><i class='fa-solid fa-seedling'></i>La casa de las plantas<i class='fa-solid fa-seedling'></i></h2>
+                            <h2>BC COMPANY</h2>
                             </div>
                             
                         </div>
@@ -460,10 +463,10 @@ function devolverBody($data){
                         </div>
                     </body>
                 </html>";
-        }
-        break;
+            }
+            break;
         case 4: {
-            $body = "<!DOCTYPE html>
+                $body = "<!DOCTYPE html>
             <html lang='en'>
                 <head>
                     <meta charset='UTF-8'>
@@ -501,7 +504,7 @@ function devolverBody($data){
                            border-radius: 5px;
                            margin: 0 auto;
                            margin-top: 1.5rem;
-                           background-color: rgba( 243,150,154);
+                           background-color: #000000;
                            padding: 1rem;  
                            box-shadow: 5px 5px 15px 5px #000000;
                            font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -564,8 +567,8 @@ function devolverBody($data){
                        /*CSS BUTTON*/
                        
                        .namebrand *{
-                           color:#F5EFE6;
                            padding: 5px;
+                           text-color: white;
                        }
                    </style>
                     <title>Mail Confirm</title>
@@ -575,7 +578,7 @@ function devolverBody($data){
                     <div class='containerFull'>
                         <div class='nav'>
                             <div class='namebrand'>
-                                <h2><i class='fa-solid fa-seedling'></i>La casa de las plantas<i class='fa-solid fa-seedling'></i></h2>
+                            <h2>BC COMPANY</h2>
                             </div>
                             
                         </div>
@@ -594,12 +597,12 @@ function devolverBody($data){
                         </div>
                     </body>
                 </html>";
-        }
-        break;
+            }
+            break;
         default: {
-            $body = '';
-        }
-        break;
+                $body = '';
+            }
+            break;
     }
     return $body;
 }

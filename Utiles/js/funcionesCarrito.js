@@ -51,7 +51,7 @@ function armarTablaCarrito(arreglo) {
 
     } else {
 
-        $('#estructuraCarrito').append('<div class=" card mb-3" style="max-width: 540px;"><div class="row g-0"><div class="col-md-4"><img src="../img/plantaTriste.PNG" class="img-fluid rounded-start" alt="..."></div><div class="col-md-8"><div class="card-body"><h4 class="card-title">Carrito de compras vac&iacuteo</h4><p class="card-text">A&uacuten no has agregado productos al carrito. Ingresa al cat&aacutelogo de productos para seleccionar los que mas te gusten.</p><p class="card-text"><a href="../Home/productos.php"><button class="btn btn-outline-success col-11">Cat&aacutelogo de productos</button></a></p></div></div></div></div>');
+        $('#estructuraCarrito').append('<div class="card mx-auto" style="max-width: 540px;"><div class="row g-0"><div class="col-md-4"><img src="../img/logo_black.svg" width="200" height="200" alt="..."></div><div class="col-md-8"><div class="card-body"><h4 class="card-title">Carrito de compras vac&iacuteo</h4><p class="card-text">A&uacuten no has agregado productos al carrito. Ingresa al cat&aacutelogo de productos para seleccionar los que mas te gusten.</p><p class="card-text"><a href="../Home/productos.php"><button class="btn btn-outline-success col-11">Cat&aacutelogo de productos</button></a></p></div></div></div></div>');
     }
 
 }

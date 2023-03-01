@@ -1,6 +1,6 @@
 <!-- INICIO PIE -->
 <section class="mt-5" style="user-select: none;">
-    <footer class="text-center text-white bg-secondary">
+    <footer class="text-center text-white bg-dark">
         <div class="container p-4 pb-2">
             <div class="row text-center">
                 <div class="col">
@@ -25,7 +25,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="text-center p-3">
             Programación Web Dinámica - 2022 <img src="../img/logo.png" class="mx-2" alt="FAI" title="FAI" width="40" height="40"> Universidad Nacional del Comahue
         </div>
     </footer>
