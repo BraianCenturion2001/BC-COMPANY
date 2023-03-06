@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-03-2023 a las 02:31:26
+-- Tiempo de generación: 06-03-2023 a las 03:13:42
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -103,16 +103,16 @@ CREATE TABLE `menu` (
 
 INSERT INTO `menu` (`idmenu`, `menombre`, `medescripcion`, `idpadre`, `medeshabilitado`) VALUES
 (1, 'Administrador Permisos', '#', NULL, NULL),
-(2, 'Administrar Menu-Roles', '../Admin/tablaMenuRoles.php', 30, NULL),
-(3, 'Administrar Roles', '../Admin/tablaRoles.php', 30, NULL),
-(12, 'Administrar Usuarios', '../Admin/tablaUsuarios.php', 1, NULL),
+(2, 'Administrar Menu-Roles', './tablaMenuRoles.php', 30, NULL),
+(3, 'Administrar Roles', './tablaRoles.php', 30, NULL),
+(12, 'Administrar Usuarios', './tablaUsuarios.php', 1, NULL),
 (13, 'Tus Compras', '#', NULL, NULL),
-(14, 'Ver Carrito', '../Cliente/carrito.php', 13, NULL),
-(15, 'Listado de Compras', '../Cliente/listaCompras.php', 13, '2023-02-26 21:05:33'),
-(16, 'Deposito Permisos', '#', NULL, '0000-00-00 00:00:00'),
-(17, 'Ver Compras', '../Deposito/tablaCompras.php', 16, NULL),
-(18, 'Ver Productos', '../Deposito/tablaProductos.php', 16, NULL),
-(29, 'Ver Perfil', '../Cliente/modificarPerfil.php', NULL, NULL),
+(14, 'Ver Carrito', './carrito.php', 13, NULL),
+(15, 'Listado de Compras', './listaCompras.php', 13, NULL),
+(16, 'Deposito Permisos', '#', NULL, NULL),
+(17, 'Ver Compras', './tablaCompras.php', 16, NULL),
+(18, 'Ver Productos', './tablaProductos.php', 16, NULL),
+(29, 'Ver Perfil', './modificarPerfil.php', NULL, NULL),
 (30, 'Opciones Menú y Rol', '#', 1, NULL);
 
 -- --------------------------------------------------------
@@ -157,12 +157,12 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`idproducto`, `pronombre`, `prodetalle`, `procantstock`, `precio`, `prodeshabilitado`, `imagen`) VALUES
-(110, 'Dakimakura Centurión', 'Suave almohada de 1,80cm para descansar a gusto, disfrutando de la compañía del Sr. Centurión', 98, 100000, '0000-00-00 00:00:00', 'producto167762994311504977263fe99f72cfbf.png'),
-(111, 'Camiseta BC', 'Camiseta manga corta de excelente calidad', 97, 30000, '0000-00-00 00:00:00', 'producto167762999735828027363fe9a2d5e464.png'),
-(112, 'Cartuchera BC', 'Donde guardar tus útiles de clases', 100, 15000, '0000-00-00 00:00:00', 'producto1677630025157301940963fe9a494c73c.png'),
-(113, 'Funda BC', 'Funda para Iphone', 100, 55000, '0000-00-00 00:00:00', 'producto167763005451288607063fe9a66732d8.png'),
-(114, 'Gorra BC', 'Para protegerte del sol', 97, 30000, '0000-00-00 00:00:00', 'producto167763007441067185163fe9a7a48783.png'),
-(115, 'Taza BC', 'Empieza los días bebiendo una buena taza de café', 99, 20000, '0000-00-00 00:00:00', 'producto167763010317612313263fe9a97dae68.png');
+(1, 'Dakimakura Centurión', 'Suave almohada de 1,80cm para descansar a gusto, disfrutando de la compañía del Sr. Centurión', 10, 100000, NULL, 'producto167762994311504977263fe99f72cfbf.png'),
+(2, 'Camiseta BC', 'Camiseta manga corta de excelente calidad', 10, 30000, NULL, 'producto167762999735828027363fe9a2d5e464.png'),
+(3, 'Cartuchera BC', 'Donde guardar tus útiles de clases', 10, 15000, NULL, 'producto1677630025157301940963fe9a494c73c.png'),
+(4, 'Funda BC', 'Funda para Iphone', 10, 55000, NULL, 'producto167763005451288607063fe9a66732d8.png'),
+(5, 'Gorra BC', 'Para protegerte del sol', 10, 30000, NULL, 'producto167763007441067185163fe9a7a48783.png'),
+(6, 'Taza BC', 'Empieza los días bebiendo una buena taza de café', 10, 20000, NULL, 'producto167763010317612313263fe9a97dae68.png');
 
 -- --------------------------------------------------------
 
@@ -203,7 +203,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`idusuario`, `usnombre`, `uspass`, `usmail`, `usdeshabilitado`) VALUES
-(1, 'mondongo', '9fe75de7500e7073d749469bb3a46cc2', 'mondongo@gmail.com', NULL),
+(1, 'mondongo', '9fe75de7500e7073d749469bb3a46cc2', 'mondongo@gmail.com', '0000-00-00 00:00:00'),
 (2, 'admin', '0192023a7bbd73250516f069df18b500', 'admin@gmail.com', NULL),
 (3, 'deposito', 'caaf856169610904e4f188e6ee23e88c', 'deposito@gmail.com', NULL),
 (4, 'cliente', '7159bbe0c8ca2a67230a26b72dea7557', 'cliente@gmail.com', NULL);
@@ -319,19 +319,19 @@ ALTER TABLE `usuariorol`
 -- AUTO_INCREMENT de la tabla `compra`
 --
 ALTER TABLE `compra`
-  MODIFY `idcompra` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `idcompra` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT de la tabla `compraestado`
 --
 ALTER TABLE `compraestado`
-  MODIFY `idcompraestado` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=146;
+  MODIFY `idcompraestado` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=153;
 
 --
 -- AUTO_INCREMENT de la tabla `compraitem`
 --
 ALTER TABLE `compraitem`
-  MODIFY `idcompraitem` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `idcompraitem` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
 -- AUTO_INCREMENT de la tabla `menu`
@@ -355,7 +355,7 @@ ALTER TABLE `rol`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `idusuario` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Restricciones para tablas volcadas
