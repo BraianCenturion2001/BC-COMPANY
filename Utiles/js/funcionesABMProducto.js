@@ -31,7 +31,7 @@ function armarTabla(arreglo) {
             var boton = '<a href="#" class="habilitar me-2"><button class="btn btn-outline-success"><i class="fa-solid fa-square-check"></i></button></a>';
         }
 
-        $('#tablaProductos > tbody:last-child').append('<tr><td>' + producto.idproducto + '</td><td>' + producto.pronombre + '</td><td>' + producto.prodetalle + '</td><td>' + producto.procantstock + '</td><td>' + producto.precio + '</td><td><img src="../img/productos/' + producto.imagen + '" class="rounded float-start" width="150" height="150"></td><td>' + producto.deshabilitado + '</td><td><button type="button" class="editarButton btn btn-outline-warning mx-2" data-bs-toggle="modal" data-bs-target="#editar-modal-producto"><i class="fa-solid fa-file-pen"></i></button>' + boton + '<a href="#" class="eliminar"><button class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button></a></td></tr>');
+        $('#tablaProductos > tbody:last-child').append('<tr><td>' + producto.idproducto + '</td><td>' + producto.pronombre + '</td><td>' + producto.prodetalle + '</td><td>' + producto.procantstock + '</td><td>' + producto.precio + '</td><td><img src="./img/productos/' + producto.imagen + '" class="rounded float-start" width="150" height="150"></td><td>' + producto.deshabilitado + '</td><td><button type="button" class="editarButton btn btn-outline-warning mx-2" data-bs-toggle="modal" data-bs-target="#editar-modal-producto"><i class="fa-solid fa-file-pen"></i></button>' + boton + '<a href="#" class="eliminar"><button class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button></a></td></tr>');
     });
 }
 

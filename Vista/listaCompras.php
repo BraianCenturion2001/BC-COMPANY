@@ -54,7 +54,7 @@ if (!$sesion->verificarPermiso('./listaCompras.php')) {
                         <div class="card-body">
                             <h4 class="card-title">A&uacute;n no has realizado ninguna compra</h4>
                             <p class="card-text"> Ingresa al cat&aacutelogo de productos para seleccionar los que mas te gusten.</p>
-                            <p class="card-text"><a href="../Home/productos.php"><button class="btn btn-outline-success col-11">Cat&aacutelogo de productos</button></a></p>
+                            <p class="card-text"><a href="./productos.php"><button class="btn btn-outline-success col-11">Cat&aacutelogo de productos</button></a></p>
                         </div>
                     </div>
                 </div>
