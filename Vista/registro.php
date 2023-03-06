@@ -26,11 +26,11 @@ include_once './Estructura/cabecera.php';
 </div>
 <!-- VALIDACIONES y ESTILOS -->
 <script src="../Utiles/js/validaciones.js"></script>
-<link rel="stylesheet" href="../../Utiles/validaciones.css">
+<link rel="stylesheet" href="../Utiles/validaciones.css">
 <!-- METODOS DE REGISTRO -->
-<script src="../../Utiles/js/registro.js"></script>
+<script src="../Utiles/js/registro.js"></script>
 
 <!-- MD5 -->
-<script src="../../Utiles/md5.js"></script>
+<script src="../Utiles/js/md5.js"></script>
 
 <?php include_once '.\Estructura\pie.php'; ?>
