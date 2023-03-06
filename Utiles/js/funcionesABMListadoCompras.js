@@ -7,7 +7,7 @@ $(window).on("load", function () {
 function cargarCompras(){
     $.ajax({
         type: "POST",
-        url: './accion/compra/listadoCompras.php',
+        url: '../Acciones/compra/listadoCompras.php',
         data: null,
         success: function (response) {
             //console.log(response);
@@ -79,7 +79,7 @@ $(document).on('click', '.verProductos', function () {
 
     $.ajax({
         type: "POST",
-        url: './accion/producto/listadoProds.php',
+        url: '../Acciones/producto/listadoProds.php',
         data: { idcompra: idcompra },
         success: function (response) {
             arreglo = [];
@@ -145,7 +145,7 @@ function cancelarCompra(idcompraestadotipo,idboton) {
             if (result) {
                 $.ajax({
                     type: "POST",
-                    url: './accion/compra/cancelarCompra.php',
+                    url: '../Acciones/compra/cancelarCompra.php',
                     data: { idcompraestado: idcompraestado, idcompra: idcompra, idcompraestadotipo:idcompraestadotipo},
                     success: function (response) {
                         console.log(response);
