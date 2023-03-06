@@ -95,7 +95,7 @@ function armarDatosUsuario(usuario) {
     } else {
         usuarioCuerpo += "<li><button class='dropdown-item'>No tienes roles</button></li>";
     }
-    usuarioCuerpo += "<li><a class='dropdown-item' href='../Login/accion/cerrarSesion.php'><i class='fa-solid fa-power-off me-2'></i>Cerrar Sesión</a></li>";
+    usuarioCuerpo += "<li><a class='dropdown-item' href='../Acciones/login/cerrarSesion.php'><i class='fa-solid fa-power-off me-2'></i>Cerrar Sesión</a></li>";
     usuarioCuerpo += "</ul></li><!-- FIN MENÚ USUARIO LOGEADO -->";
 
     $('#menu').append(usuarioCuerpo);
