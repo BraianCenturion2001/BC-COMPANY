@@ -12,8 +12,10 @@ function cargarCompras(){
         data: null,
         success: function (response) {
             var arreglo = [];
-            $.each($.parseJSON(response), function (index, compraActual) {
-                arreglo.push(compraActual);
+            $.each($.parseJSON(response), function (index, array) {
+                $.each(array, function (index, arrayCompra) {
+                    arreglo.push(arrayCompra);
+                });
             });
 
             armarTabla(arreglo);
@@ -61,7 +63,7 @@ function armarTabla(arreglo) {
                 estadoVista = "<span class='badge rounded-pill text-bg-danger'>Cancelada</span>";
                 break;
         }
-        $('#tablaCompras > tbody:last-child').append('<tr><td style="display:none;">' + compra.idcompra + '</td><th scope="row">' + compra.idcompraestado + '</th><td>' + compra.usnombre + '</td><td><a href="#" class="verProductos"><button class="btn btn-outline-info col-8"><i class="fa-solid fa-list-ul mx-2"></i></button></a></td><td>' + estadoVista + '</td><td>' + compra.cofecha + '</td><td>' + compra.finfecha + '</td>' + botones + '</tr>');
+        $('#tablaCompras > tbody:last-child').append('<tr><td style="display:none;">' + compra.idcompraestado + '</td><th scope="row">' + compra.idcompra + '</th><td>' + compra.usnombre + '</td><td><a href="#" class="verProductos"><button class="btn btn-outline-info col-8"><i class="fa-solid fa-list-ul mx-2"></i></button></a></td><td>' + estadoVista + '</td><td>' + compra.cofecha + '</td><td>' + compra.finfecha + '</td>' + botones + '</tr>');
     });
 }
 
@@ -70,7 +72,7 @@ function armarTabla(arreglo) {
 $(document).on('click', '.verProductos', function () {
 
     var fila = $(this).closest('tr');
-    var idcompra = fila[0].children[0].innerHTML;
+    var idcompra = fila[0].children[1].innerHTML;
     var pronombre = fila[0].children[2].innerHTML;
 
 
@@ -118,8 +120,9 @@ $(document).on('click', '#cerrar', function () {
 
 function cambiarEstado(idcompraestadotipo, idboton) {
     var fila = $('#' + idboton + '').closest('tr');
-    var idcompra = fila[0].children[0].innerHTML;
-    var idcompraestado = fila[0].children[1].innerHTML;
+    var idcompraestado = fila[0].children[0].innerHTML;
+    var idcompra = fila[0].children[1].innerHTML;
+   
 
     $.ajax({
         type: "POST",

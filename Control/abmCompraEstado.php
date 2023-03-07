@@ -235,6 +235,8 @@ class abmCompraEstado
                 $resp = $this->cambiarEstado($datos, $elem);
             }
         }
+        // FUNCION PHPMAILER PARA EL ENVIO DEL CORREO POR EL CAMBIO DE ESTADO
+        enviarMail($datos);
 
         return $resp;
     }
