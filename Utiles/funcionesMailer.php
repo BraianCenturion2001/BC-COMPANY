@@ -181,7 +181,7 @@ function devolverBody($data)
                             <div class='containerRedes'>
                                 <h3 class='h3 subtitleRedes'>Estado de tu pedido!</h3>
                                 <a
-                                    href='http://localhost/TP-Final-PWD/Vista/Cliente/listaCompras.php'
+                                    href='http://localhost/TP-Final-PWD/Vista/listaCompras.php'
                                     target='_blank'><button class='hvr-overline-from-center'>Click
                                         aquí!</button></a>
                             </div>
@@ -317,7 +317,7 @@ function devolverBody($data)
                             </div>
                             <div class='containerRedes'>
                                 <h3 class='h3 subtitleRedes'>Estado de tu compra!</h3>
-                                <a  href='http://localhost/TP-Final-PWD/Vista/Cliente/listaCompras.php' target='_blank'><button class='hvr-overline-from-center' >Click aquí!</button></a>
+                                <a  href='http://localhost/TP-Final-PWD/Vista/listaCompras.php' target='_blank'><button class='hvr-overline-from-center' >Click aquí!</button></a>
                             </div>
                         </div>
                     </body>
@@ -456,7 +456,7 @@ function devolverBody($data)
                             <div class='containerRedes'>
                                 <h3 class='h3 subtitleRedes'>Volvé a comprar con nosotros!</h3>
                                 <a
-                                    href='http://localhost/TP-Final-PWD/Vista/Home/productos.php'
+                                    href='http://localhost/TP-Final-PWD/Vista/productos.php'
                                     target='_blank'><button class='hvr-overline-from-center'>Click
                                         aquí!</button></a>
                             </div>
@@ -592,7 +592,7 @@ function devolverBody($data)
                             </div>
                             <div class='containerRedes'>
                                 <h3 class='h3 subtitleRedes'>Volvé a comprar con nosotros!</h3>
-                                <a  href='http://localhost/TP-Final-PWD/Vista/Home/productos.php' target='_blank'><button class='hvr-overline-from-center' >Click aquí!</button></a>
+                                <a  href='http://localhost/TP-Final-PWD/Vista/productos.php' target='_blank'><button class='hvr-overline-from-center' >Click aquí!</button></a>
                             </div>
                         </div>
                     </body>
