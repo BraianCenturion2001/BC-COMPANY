@@ -36,7 +36,7 @@ function armarTabla(arreglo) {
             
             switch (compra.estado) {
                 case "iniciada":
-                    botones = "<td><a href='#' id='cancelarCompra' onclick='cancelarCompra(4,"+compra.idcompra+","+compra.idcompraestado+")'><button class='btn btn-outline-danger'><i class='fa-solid fa-xmark me-2'></i>Cancelar</button></a></td>";
+                    botones = "<td><a href='#' onclick='cancelarCompra(4,"+compra.idcompra+","+compra.idcompraestado+")'><button class='btn btn-outline-danger'><i class='fa-solid fa-xmark me-2'></i>Cancelar</button></a></td>";
                     break;
                 default:
                     botones = "<td>-</td>";
@@ -61,7 +61,7 @@ function armarTabla(arreglo) {
                 estadoVista = "<span class='badge rounded-pill text-bg-danger'>Cancelada</span>";
                 break;
         }
-        $('#tablaCompras > tbody:last-child').append('<tr><td hidden>' + compra.idcompraestado + '</td><th scope="row">' + compra.idcompra + '</th><td hidden>' + compra.usnombre + '</td><td><a href="#" class="verProductos"><button class="btn btn-outline-info col-8"><i class="fa-solid fa-list-ul mx-2"></i></button></a></td><td>' + estadoVista + '</td><td>' + compra.cofecha + '</td><td>' + compra.finfecha + '</td>' +botones+ '</tr>');
+        $('#tablaCompras > tbody:last-child').append('<tr><td hidden>' + compra.idcompraestado + '</td><th scope="row">' + compra.idcompra + '</th><td hidden>' + compra.usnombre + '</td><td><a href="#" class="verProductos"><button class="btn btn-outline-info col-8"><i class="fa-solid fa-list-ul mx-2"></i></button></a></td><td>' + estadoVista + '</td><td>' + compra.cofecha + '</td>' +botones+ '</tr>');
     });
 }
 
